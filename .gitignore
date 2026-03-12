@@ -1,0 +1,12 @@
+# ignore .env and .venv
+.env 
+.venv/
+
+# ignore project_outline.md
+project_outline.md
+
+# ignore report.md
+report.md
+
+# ignore pycache
+__pycache__/
