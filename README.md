@@ -46,11 +46,16 @@ Each writer node runs concurrently and contributes its section to the shared sta
 
 ```
 report_generator/
-├── main.py        # Entry point — compiles and invokes the graph
-├── graph.py       # Graph definition, nodes, edges, and routing logic
-├── nodes.py       # Node implementations: planner, writer, assembler
-└── state.py       # Shared state schema (ReportState TypedDict)
+└── main.py        # All logic consolidated into a single file
 ```
+
+`main.py` is organized into the following sections:
+
+1. **State** — `ReportState` TypedDict defining the shared graph state
+2. **Structured output schemas** — Pydantic models (`PlannerOutput`, `WriterOutput`) for type-safe LLM responses
+3. **Nodes** — `planner_node`, `writer_node`, and `assemble_report_node` implementations
+4. **Graph** — graph construction, edge definitions, and the `fan_out_to_writers` conditional edge function
+5. **Entry point** — compiles the graph, invokes it with a topic, and writes the result to `report.md`
 
 ---
 
