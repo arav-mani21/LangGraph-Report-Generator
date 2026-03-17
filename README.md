@@ -63,12 +63,12 @@ report_generator/
 
 **Prerequisites**
 - Python 3.11+
-- An Anthropic API key
+- Your own Anthropic API key
 
 **Installation**
 
 ```bash
-git clone https://github.com/your-username/langgraph-report-generator.git
+git clone https://github.com/arav-mani21/langgraph-report-generator.git
 cd langgraph-report-generator
 
 python -m venv .venv
